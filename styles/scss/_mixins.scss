@@ -1,0 +1,15 @@
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+@mixin breakpoint($device) {
+    @if $device == desktop {
+        @media (min-width: 500px){
+            @content
+        }
+    }
+}

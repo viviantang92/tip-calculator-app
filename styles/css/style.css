@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 * {
   font-family: "Space Mono", monospace;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 footer .attribution {
