@@ -14,34 +14,52 @@
   </header>
   
   <main>
-    <div>
-      Bill
-    </div>
-    <div>
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
-    </div>
-    <div>
-      Number of People
-    </div>
-    <div>
-      Tip Amount
-      / person
-      Total
-      / person
-      Reset
-    </div>
+    <section class="bill">
+      <h4>Bill</h4>
+      <input type="number" placeholder="0" class="bill--input">
+    </section>
+    <section class="tip">
+      <h4>Select Tip %</h4>
+      <div class="tip--selections">
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input type="number" placeholder="Custom" class="tip--input"></input>
+      </div>
+    </section>
+    <section class="people">
+      <h4>Number of People</h3>
+      <input type="number" placeholder="0" class="people--input">
+    </section>
+    <section class="result">
+      <div class="result--tip result--container">
+        <div class="result--tip-text">
+          <p>Tip Amount</p>
+          <span>/ person</span>
+        </div>
+        <div class="result--tip-number">
+          <p class="total">$100</p>
+        </div>
+      </div>
+      <div class="result--total result--container">
+        <div class="result--total-text">
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
+        <div class="result--total-number">
+          <p class="total">$100</p>
+        </div>
+      </div>
+      <button type="reset">Reset</button>
+    </section>
   </main>
 
   <footer>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://github.com/VivianTang11/tip-calculator-app" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/VivianTang11">Vivian Tang</a>.
     </div>
   </footer>
 

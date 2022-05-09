@@ -2,8 +2,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
+}
+
+@mixin buttonHover {
+    cursor: pointer;
+    background-color: hsl(172, 76%, 53%);
+    color: $dark;
+}
+
+@mixin inputButton{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 24px;
 }
 
 @mixin breakpoint($device) {

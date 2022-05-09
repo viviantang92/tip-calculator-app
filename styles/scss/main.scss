@@ -3,20 +3,171 @@
 @import './mixins';
 
 *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
     font-family: $space;
-    background-color: $bg;
 }
 
 body{
-    @include flex
+    @include flex;
+    background-color: $bg;
+    @include breakpoint(desktop){
+        min-height: 100vh;
+    }
+}
+
+header{
+    margin:1rem;
+    @include breakpoint(desktop){
+        margin:0;
+    }
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem;
+    @include breakpoint(desktop){
+        width: 80vw;
+        height: 30vh;
+        border-radius: 1rem;
+        display: grid; 
+        grid-auto-flow: row dense; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+          "bill result"
+          "tip result"
+          "people result"; 
+    }
+
+    section{
+        margin: 1rem 0;
+        @include breakpoint(desktop){
+            margin: 0;
+        }
+    }
+    
+    .bill{
+        &--input{
+            background: no-repeat url(../../images/icon-dollar.svg) center left;
+            background-color: $bg-input;
+        }
+        @include breakpoint(desktop){
+            grid-area: bill;
+        }
+
+    }
+
+    .tip{
+        &--selections{
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr; 
+            gap: 1em 1em;
+            @include breakpoint(desktop){
+                display: grid; 
+                grid-template-columns: 1fr 1fr 1fr; 
+                grid-template-rows: 1fr 1fr; 
+                gap: 1em 1em;
+                grid-area: tip;
+            }
+        }
+    
+    }
+    .people{
+        &--input{
+            background: no-repeat url(../../images/icon-person.svg) center left;
+            background-color: $bg-input;
+        }
+        @include breakpoint(desktop){
+            grid-area: people;
+        }
+    }
+
+    .result{
+        background-color: $dark;
+        border-radius: 1rem;
+        padding: 1rem;
+        @include breakpoint(desktop){
+            grid-area: result;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--container{
+            width: 100%;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 footer{
+    position: fixed;
+    bottom: 0;
+    font-size: 11px;
     .attribution { 
         font-size: 11px; 
         text-align: center; 
         a { 
             color: hsl(228, 45%, 44%); 
+            font-size: 11px;
         }
     }
+}
+input{
+    width: 100%;
+    background-color: $bg-input;
+    text-align: right;
+    @include inputButton;
+    &::placeholder{
+        position: absolute;
+        right: 0;
+        padding-right: 0.5rem;
+    }
+    &:focus-visible{
+        outline: $light 1px solid;
+    }
+    &:hover{
+        cursor: pointer;
+        outline: $light 2px solid;
+    }
+}
+button{
+    width: 100%;
+    background-color: $dark ;
+    color: $white;
+    @include inputButton;
+    &:hover{
+        @include buttonHover;
+    }
+}
+button[type='reset']{
+    margin-top: 1rem;
+    background-color: $light;
+    color: $dark;
+    text-transform: uppercase;
+    &:hover{
+        @include buttonHover;
+    }
+}
+
+h4{
+    color:$gray-dark;
+}
+p{
+    color: $white;
+}
+.total{
+    color: $light;
+    font-size: 24px;
+}
+span{
+    color: $gray-light;
 }
