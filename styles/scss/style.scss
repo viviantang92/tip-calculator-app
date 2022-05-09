@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import './variables';
+*{
+    font-family: $space;
+}
+
+footer{
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        a { 
+            color: hsl(228, 45%, 44%); 
+        }
+    }
+}
