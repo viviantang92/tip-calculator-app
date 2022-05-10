@@ -16,22 +16,22 @@
   <main>
     <section class="bill">
       <h4>Bill</h4>
-      <input type="number" placeholder="0" class="bill--input">
+      <input type="number" placeholder="0" class="bill--input" id="bill">
     </section>
     <section class="tip">
       <h4>Select Tip %</h4>
       <div class="tip--selections">
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input type="number" placeholder="Custom" class="tip--input"></input>
+        <button value="0.05" class="percent" id="5">5%</button>
+        <button value="0.1" class="percent" id="10">10%</button>
+        <button value="0.15" class="percent" id="15">15%</button>
+        <button value="0.25" class="percent" id="25">25%</button>
+        <button value="0.5" class="percent" id="50">50%</button>
+        <input type="number" placeholder="Custom" class="tip--input" id="percentCustom">
       </div>
     </section>
     <section class="people">
       <h4>Number of People</h3>
-      <input type="number" placeholder="0" class="people--input">
+      <input type="number" placeholder="0" class="people--input" id="people" >
     </section>
     <section class="result">
       <div class="result--tip result--container">
@@ -40,7 +40,7 @@
           <span>/ person</span>
         </div>
         <div class="result--tip-number">
-          <p class="total">$100</p>
+          <p class="total" id="resultTip">$0.00</p>
         </div>
       </div>
       <div class="result--total result--container">
@@ -49,10 +49,10 @@
           <span>/ person</span>
         </div>
         <div class="result--total-number">
-          <p class="total">$100</p>
+          <p class="total" id="resultTotal">$0.00</p>
         </div>
       </div>
-      <button type="reset">Reset</button>
+      <button type="reset" id="resetBtn">Reset</button>
     </section>
   </main>
 
@@ -62,6 +62,6 @@
       Coded by <a href="https://github.com/VivianTang11">Vivian Tang</a>.
     </div>
   </footer>
-
+<script src="./script.js"></script>
 </body>
 </html>
