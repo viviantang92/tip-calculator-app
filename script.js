@@ -13,12 +13,8 @@ let tip = 0;
 const calculation = () => {
     let tipPerPerson = ((bill.value / 100) * tip) / people.value;
     let totalPerPerson = bill.value / people.value + tipPerPerson;
-    resultTip.innerText =
-      "$" + tipPerPerson.toFixed(2);
-      resultTotal.innerText =
-      "$" + totalPerPerson.toFixed(2);
-
-      console.log(tip);
+    resultTip.innerText = "$" + tipPerPerson.toFixed(2);
+    resultTotal.innerText = "$" + totalPerPerson.toFixed(2);
 };
 
 // Add event listeners to each tip button 
@@ -27,6 +23,7 @@ const chooseTip = () => {
     tips.forEach((amount) => {
       document.getElementById(amount).addEventListener("click", () => {
         tip = amount;
+        document.getElementById(amount).classList.add("active").
         calculation();
     })})
 };

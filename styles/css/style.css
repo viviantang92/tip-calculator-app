@@ -173,6 +173,12 @@ button[type=reset]:hover {
   color: hsl(183deg, 100%, 15%);
 }
 
+.active {
+  cursor: pointer;
+  background-color: hsl(172deg, 76%, 53%);
+  color: hsl(183deg, 100%, 15%);
+}
+
 h4 {
   color: hsl(186deg, 14%, 43%);
 }

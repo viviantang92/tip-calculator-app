@@ -158,6 +158,10 @@ button[type='reset']{
     }
 }
 
+.active{
+    @include buttonHover;
+}
+
 h4{
     color:$gray-dark;
 }
