@@ -16,4 +16,4 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/VivianTang11)
+- Frontend Mentor - [@VivianTang11](https://www.frontendmentor.io/profile/VivianTang11)
