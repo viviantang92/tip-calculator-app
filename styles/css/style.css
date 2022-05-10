@@ -23,11 +23,6 @@ body {
 header {
   margin: 1rem;
 }
-@media (min-width: 500px) {
-  header {
-    margin: 0;
-  }
-}
 
 main {
   width: 100vw;

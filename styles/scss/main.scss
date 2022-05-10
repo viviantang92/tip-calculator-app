@@ -19,9 +19,6 @@ body{
 
 header{
     margin:1rem;
-    @include breakpoint(desktop){
-        margin:0;
-    }
 }
 
 main{
