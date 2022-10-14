@@ -1,5 +1,7 @@
 # Frontend Mentor - Tip calculator app solution
 
+Link: https://viviantang11.github.io/tip-calculator-app/
+
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### Screenshot
